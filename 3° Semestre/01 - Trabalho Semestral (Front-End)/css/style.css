@@ -1,0 +1,391 @@
+:root {
+    --primary-purple: #6a1b9a;
+    --dark-purple: #38006b;
+    --light-purple: #9c4dcc;
+    --accent-purple: #8e24aa;
+    --bg-dark: #1a0033;
+    --bg-medium: #2d004d;
+    --bg-body: #fcf6ff;
+    --text-light: #f5f0ff;
+    --text-dark: #1a0033;
+    --gold: #ffc107;
+}
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', 'Times New Roman', serif;
+    font-weight: 700;
+}
+
+
+
+.navbar {
+    background: linear-gradient(135deg, var(--dark-purple), var(--primary-purple));
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: white;
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    position: relative;
+    text-align: center;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: white;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--gold);
+    transform: translateX(-50%);
+}
+
+
+
+.header-banner h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+.header-banner {
+    background: linear-gradient(rgba(26, 0, 51, 0.8), rgba(58, 0, 112, 0.8)), url('../img/wow-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+.about-banner {
+    background: linear-gradient(rgba(26, 0, 51, 0.8), rgba(58, 0, 112, 0.8)), url('../img/wow-about-banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.contact-banner {
+    background: linear-gradient(rgba(26, 0, 51, 0.8), rgba(58, 0, 112, 0.8)), url('../img/wow-contact-banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.title-main {
+    text-align: center;
+}
+
+
+
+.class-card {
+    background: linear-gradient(135deg, #f5f0ff, #e6e0ff);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(26, 0, 51, 0.1);
+    margin-bottom: 1.3rem;
+    border: 1px solid rgba(156, 77, 204, 0.2);
+    min-width: 220px;
+    width: 100%;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.class-card-hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(26, 0, 51, 0.15);
+    border-color: rgba(156, 77, 204, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.class-image {
+    min-height: 180px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    flex: 1 1 0;
+}
+.class-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.class-card:hover .class-image img {
+    transform: scale(1.1);
+}
+.class-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(106, 27, 154, 0.4), rgba(156, 77, 204, 0.2));
+    z-index: 1;
+}
+.card-body {
+    padding: 0.75rem;
+}
+.card-title {
+    color: var(--primary-purple);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-purple);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+.card-text {
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+.row.g-4.row-cols-1.row-cols-sm-2.row-cols-lg-3 > div {
+    display: flex;
+}
+.class-card .row.g-0 {
+    height: 100%;
+}
+.class-card .col-lg-5,
+.class-card .col-lg-7 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+
+.about-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 6px 15px rgba(26, 0, 51, 0.1);
+}
+.about-section {
+    margin-bottom: 2.5rem;
+}
+.about-section h3 {
+    color: var(--primary-purple);
+    border-bottom: 2px solid var(--light-purple);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.expansion-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.expansion-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(156, 77, 204, 0.2);
+}
+.expansion-list li:last-child {
+    border-bottom: none;
+}
+.role-section {
+    background-color: #f5f0ff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid;
+}
+.role-section h4 {
+    color: var(--primary-purple);
+    margin-bottom: 1rem;
+}
+.role-section.tank {
+    border-left-color: #795548;
+}
+.role-section.healer {
+    border-left-color: #4CAF50;
+}
+.role-section.dps {
+    border-left-color: #F44336;
+}
+.role-section i {
+    margin-right: 0.5rem;
+}
+
+
+
+.contact-info {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 6px 15px rgba(26, 0, 51, 0.1);
+    height: 100%;
+}
+.contact-form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 6px 15px rgba(26, 0, 51, 0.1);
+}
+.contact-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-purple);
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+}
+.contact-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+    color: var(--primary-purple);
+}
+.contact-item p {
+    margin-bottom: 0;
+    color: var(--text-dark);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-purple);
+    color: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.social-icon:hover {
+    background-color: var(--dark-purple);
+    transform: translateY(-3px);
+}
+
+
+
+.form-label {
+    color: var(--primary-purple);
+    font-weight: 600;
+}
+.form-control, .form-select {
+    border: 1px solid rgba(156, 77, 204, 0.3);
+    border-radius: 5px;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 0.25rem rgba(106, 27, 154, 0.25);
+}
+.form-check-input:checked {
+    background-color: var(--primary-purple);
+    border-color: var(--primary-purple);
+}
+.btn-primary {
+    background-color: var(--primary-purple);
+    border-color: var(--primary-purple);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--dark-purple);
+    border-color: var(--dark-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(26, 0, 51, 0.2);
+}
+
+
+
+footer {
+    background: linear-gradient(135deg, var(--dark-purple), var(--primary-purple));
+    margin-top: 2rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+
+
+.swal2-title {
+    color: var(--primary-purple) !important;
+    font-family: 'Cinzel', serif !important;
+}
+.swal2-html-container {
+    color: var(--text-dark) !important;
+}
+.swal2-confirm {
+    background-color: var(--primary-purple) !important;
+}
+.text-purple {
+    color: var(--primary-purple) !important;
+}
+.swal-content {
+    text-align: left !important;
+}
+
+
+
+@media (max-width: 992px) {
+    .header-banner h1 {
+        font-size: 2.5rem;
+    }
+    .class-card .row {
+        flex-direction: column;
+        height: auto;
+    }
+    .class-card .col-4, .class-card .col-8 {
+        width: 100%;
+        max-width: 100%;
+    }
+    .class-card .col-lg-5, .class-card .col-lg-7 {
+        height: auto;
+    }
+    .class-image {
+        height: 200px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-banner h1 {
+        font-size: 2rem;
+    }
+    .card-title {
+        font-size: 1.2rem;
+    }
+    .contact-info, .contact-form {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-banner {
+        padding: 3rem 0;
+    }
+    .header-banner h1 {
+        font-size: 1.8rem;
+    }
+    .header-banner .lead {
+        font-size: 1rem;
+    }
+    .class-card {
+        margin-bottom: 1rem;
+    }
+    .class-image {
+        height: 150px;
+        align-items: flex-start;
+    }
+}
